@@ -28,7 +28,7 @@ After that, you need to learn how to build beautiful web pages with tailwindcss 
 
     mix.postCss('resources/css/app.css', 'public/css', [
 
-                 require('tailwindcss'),
+                               require('tailwindcss'),
 
     ]);- Include the compiled CSS file in your Blade layout, resources/views/layouts/app.blade.php:
 
