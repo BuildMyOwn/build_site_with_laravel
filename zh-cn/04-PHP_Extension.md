@@ -34,6 +34,8 @@ pecl install redis
 
 ![](./images/04-PHP_Extension_1.png)
 
+---
+
 ## 总结
 
 PHP 扩展是增强 PHP 功能的重要工具。开发者可以根据具体的应用需求，选择并安装合适的扩展。
