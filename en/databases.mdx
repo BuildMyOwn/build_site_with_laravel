@@ -1,0 +1,84 @@
+---
+order: 9
+title: Databases
+---
+
+# {frontmatter.title}
+
+This article covers how Laravel handles databases.
+
+## Introduction
+
+Databases are essential in modern web applications. Laravel provides robust tools for database interactions.
+
+## Configuration
+
+Laravel uses `config/database.php` for database settings.
+
+## Migrations
+
+Migrations are version control for your database:
+
+```bash
+php artisan make:migration create_users_table
+```
+
+Run migrations:
+
+```bash
+php artisan migrate
+```
+
+## Eloquent ORM
+
+Eloquent provides an elegant way to interact with databases:
+
+```php
+// Create
+$user = new User;
+$user->name = 'John Doe';
+$user->save();
+
+// Read
+$users = User::all();
+
+// Update
+$user->name = 'Jane Doe';
+$user->save();
+
+// Delete
+$user->delete();
+```
+
+## Query Builder
+
+For more direct queries:
+
+```php
+$users = DB::table('users')->get();
+```
+
+## Database Seeding
+
+Populate database with test data:
+
+```bash
+php artisan make:seeder UsersTableSeeder
+```
+
+## Transactions
+
+Manage database transactions:
+
+```php
+DB::transaction(function () {
+    $user = User::create([
+        'name' => 'John Doe',
+        'email' => 'john@example.com',
+    ]);
+});
+```
+
+## Conclusion
+
+Laravel provides comprehensive tools for working with databases.

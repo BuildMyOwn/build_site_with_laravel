@@ -1,0 +1,42 @@
+---
+order: 8
+title: Laravel Log
+---
+
+# {frontmatter.title}
+
+This article covers Laravel's logging system.
+
+## Logging Basics
+
+Laravel provides a powerful logging system.
+
+## Configuration
+
+Logs are configured in `config/logging.php`.
+
+## Usage
+
+```php
+use Illuminate\Support\Facades\Log;
+
+Log::info('This is an info message');
+Log::warning('This is a warning');
+Log::error('This is an error');
+```
+
+## Log Channels
+
+Laravel supports multiple log channels:
+
+```php
+Log::channel('slack')->error('Critical error!');
+```
+
+## Viewing Logs
+
+Logs are stored in `storage/logs/laravel.log`.
+
+## Conclusion
+
+Laravel's logging system helps you track application issues.

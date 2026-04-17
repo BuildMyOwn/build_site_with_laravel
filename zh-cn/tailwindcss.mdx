@@ -1,0 +1,47 @@
+---
+order: 21
+title: TailwindCSS
+---
+
+# {frontmatter.title}
+
+TailwindCSS 是一个实用优先的 CSS 框架。
+
+## 安装
+
+```bash
+npm install -D tailwindcss
+npx tailwindcss init -p
+```
+
+## 配置
+
+更新 `tailwind.config.js`：
+
+```js
+module.exports = {
+  content: ['./src/**/*.{html,js,ts,jsx,tsx,vue,svelte}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+## 使用
+
+在 Blade 模板中使用 Tailwind 类：
+
+```html
+<div class="bg-blue-500 text-white p-4 rounded">
+  这是一个带样式的 div
+</div>
+```
+
+## JIT 模式
+
+Tailwind CSS 在生产环境使用 JIT（即时）模式。
+
+## 结论
+
+Tailwind CSS 通过实用类加快开发速度。

@@ -1,0 +1,57 @@
+---
+order: 18
+title: 面向对象编程
+---
+
+# {frontmatter.title}
+
+PHP 支持面向对象编程。
+
+## 类和对象
+
+```php
+class Animal {
+    public $name;
+    public $sound;
+
+    public function __construct($name, $sound) {
+        $this->name = $name;
+        $this->sound = $sound;
+    }
+
+    public function makeSound() {
+        return $this->sound;
+    }
+}
+
+$cat = new Animal("Cat", "Meow");
+echo $cat->makeSound();
+```
+
+## 继承
+
+```php
+class Dog extends Animal {
+    public function __construct($name) {
+        parent::__construct($name, "Woof");
+    }
+}
+```
+
+## 接口
+
+```php
+interface Flyable {
+    public function fly();
+}
+
+class Bird implements Flyable {
+    public function fly() {
+        return "飞得高！";
+    }
+}
+```
+
+## 结论
+
+面向对象编程帮助组织代码。

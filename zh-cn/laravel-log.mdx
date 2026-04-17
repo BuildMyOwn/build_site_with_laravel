@@ -1,0 +1,42 @@
+---
+order: 8
+title: Laravel 日志
+---
+
+# {frontmatter.title}
+
+本文介绍 Laravel 的日志系统。
+
+## 日志基础
+
+Laravel 提供了强大的日志系统。
+
+## 配置
+
+日志在 `config/logging.php` 中配置。
+
+## 使用
+
+```php
+use Illuminate\Support\Facades\Log;
+
+Log::info('这是一条信息');
+Log::warning('这是一条警告');
+Log::error('这是一条错误');
+```
+
+## 日志通道
+
+Laravel 支持多个日志通道：
+
+```php
+Log::channel('slack')->error('严重错误！');
+```
+
+## 查看日志
+
+日志存储在 `storage/logs/laravel.log`。
+
+## 结论
+
+Laravel 的日志系统帮助你追踪应用问题。

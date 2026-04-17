@@ -1,0 +1,47 @@
+---
+order: 21
+title: TailwindCSS
+---
+
+# {frontmatter.title}
+
+TailwindCSS is a utility-first CSS framework.
+
+## Installation
+
+```bash
+npm install -D tailwindcss
+npx tailwindcss init -p
+```
+
+## Configuration
+
+Update `tailwind.config.js`:
+
+```js
+module.exports = {
+  content: ['./src/**/*.{html,js,ts,jsx,tsx,vue,svelte}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+## Usage
+
+Use Tailwind classes in your Blade templates:
+
+```html
+<div class="bg-blue-500 text-white p-4 rounded">
+  This is a styled div
+</div>
+```
+
+## JIT Mode
+
+Tailwind CSS uses JIT (Just-In-Time) mode for production.
+
+## Conclusion
+
+Tailwind CSS speeds up development with utility classes.

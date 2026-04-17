@@ -1,0 +1,50 @@
+---
+order: 20
+title: Laravel Livewire
+---
+
+# {frontmatter.title}
+
+Laravel Livewire 是 Laravel 的全栈框架。
+
+## 安装
+
+```bash
+composer require livewire/livewire
+php artisan livewire:publish --config
+```
+
+## 创建组件
+
+创建 Livewire 组件：
+
+```bash
+php artisan make:livewire Counter
+```
+
+这会创建：
+
+```php
+class Counter extends Component
+{
+    public $count = 0;
+
+    public function increment()
+    {
+        $this->count++;
+    }
+}
+```
+
+## 在 Blade 中使用
+
+```html
+<div>
+    <h1>{{ $count }}</h1>
+    <button wire:click="increment">+</button>
+</div>
+```
+
+## 结论
+
+Livewire 简化了 Laravel 中的动态 UI 开发。

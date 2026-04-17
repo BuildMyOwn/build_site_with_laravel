@@ -1,0 +1,84 @@
+---
+order: 9
+title: 数据库
+---
+
+# {frontmatter.title}
+
+本文介绍 Laravel 如何处理数据库。
+
+## 介绍
+
+数据库在现代 Web 应用中至关重要。Laravel 提供了强大的数据库工具。
+
+## 配置
+
+Laravel 使用 `config/database.php` 进行数据库设置。
+
+## 迁移
+
+迁移是数据库的版本控制：
+
+```bash
+php artisan make:migration create_users_table
+```
+
+运行迁移：
+
+```bash
+php artisan migrate
+```
+
+## Eloquent ORM
+
+Eloquent 提供优雅的数据库交互方式：
+
+```php
+// 创建
+$user = new User;
+$user->name = 'John Doe';
+$user->save();
+
+// 查询
+$users = User::all();
+
+// 更新
+$user->name = 'Jane Doe';
+$user->save();
+
+// 删除
+$user->delete();
+```
+
+## 查询构建器
+
+更直接的查询：
+
+```php
+$users = DB::table('users')->get();
+```
+
+## 数据库填充
+
+用测试数据填充数据库：
+
+```bash
+php artisan make:seeder UsersTableSeeder
+```
+
+## 事务
+
+管理数据库事务：
+
+```php
+DB::transaction(function () {
+    $user = User::create([
+        'name' => 'John Doe',
+        'email' => 'john@example.com',
+    ]);
+});
+```
+
+## 结论
+
+Laravel 提供了全面的数据库工具。

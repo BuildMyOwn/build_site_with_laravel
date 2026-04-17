@@ -1,0 +1,57 @@
+---
+order: 18
+title: Object-Oriented Programming
+---
+
+# {frontmatter.title}
+
+PHP supports object-oriented programming.
+
+## Classes and Objects
+
+```php
+class Animal {
+    public $name;
+    public $sound;
+
+    public function __construct($name, $sound) {
+        $this->name = $name;
+        $this->sound = $sound;
+    }
+
+    public function makeSound() {
+        return $this->sound;
+    }
+}
+
+$cat = new Animal("Cat", "Meow");
+echo $cat->makeSound();
+```
+
+## Inheritance
+
+```php
+class Dog extends Animal {
+    public function __construct($name) {
+        parent::__construct($name, "Woof");
+    }
+}
+```
+
+## Interfaces
+
+```php
+interface Flyable {
+    public function fly();
+}
+
+class Bird implements Flyable {
+    public function fly() {
+        return "Flying high!";
+    }
+}
+```
+
+## Conclusion
+
+Object-oriented programming helps organize code.

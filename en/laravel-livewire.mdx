@@ -1,0 +1,50 @@
+---
+order: 20
+title: Laravel Livewire
+---
+
+# {frontmatter.title}
+
+Laravel Livewire is a full-stack framework for Laravel.
+
+## Installation
+
+```bash
+composer require livewire/livewire
+php artisan livewire:publish --config
+```
+
+## Creating Components
+
+Create a Livewire component:
+
+```bash
+php artisan make:livewire Counter
+```
+
+This creates:
+
+```php
+class Counter extends Component
+{
+    public $count = 0;
+
+    public function increment()
+    {
+        $this->count++;
+    }
+}
+```
+
+## Usage in Blade
+
+```html
+<div>
+    <h1>{{ $count }}</h1>
+    <button wire:click="increment">+</button>
+</div>
+```
+
+## Conclusion
+
+Livewire simplifies dynamic UI development in Laravel.
